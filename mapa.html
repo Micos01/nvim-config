@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NvChad Cheatsheet Wallpaper</title>
+    <style>
+        :root {
+            --bg: #1e1e2e;
+            --card-bg: #313244;
+            --text: #cdd6f4;
+            --accent: #89b4fa;
+            --key-bg: #45475a;
+            --key-text: #f5e0dc;
+            --border: #585b70;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-shadow: 0 0 10px rgba(137, 180, 250, 0.3);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 95%;
+            max-width: 1800px;
+        }
+
+        .card {
+            background: rgba(49, 50, 68, 0.5);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .shortcut-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .shortcut-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .keys {
+            display: flex;
+            gap: 5px;
+        }
+
+        kbd {
+            background-color: var(--key-bg);
+            color: var(--key-text);
+            border-radius: 4px;
+            padding: 3px 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            box-shadow: 0 2px 0 #181825;
+            min-width: 18px;
+            text-align: center;
+        }
+
+        .desc {
+            opacity: 0.9;
+        }
+
+        .spc {
+            color: #fab387; /* Cor diferente para a tecla leader */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>NvChad Cheatsheet</h1>
+
+    <div class="grid-container">
+        
+        <!-- Coluna 1: Vim Básico -->
+        <div class="card">
+            <div class="card-title">🎮 Vim Básico (Survival)</div>
+            <ul class="shortcut-list">
+                <li class="shortcut-item">
+                    <span class="desc">Mover (← ↓ ↑ →)</span>
+                    <div class="keys"><kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Modos (Ins/Vis/Norm)</span>
+                    <div class="keys"><kbd>i</kbd> <kbd>v</kbd> <kbd>Esc</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Desfazer / Refazer</span>
+                    <div class="keys"><kbd>u</kbd> / <kbd>C</kbd><kbd>r</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Copiar / Colar</span>
+                    <div class="keys"><kbd>y</kbd> / <kbd>p</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Recortar (Linha)</span>
+                    <div class="keys"><kbd>d</kbd><kbd>d</kbd></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coluna 2: Geral -->
+        <div class="card">
+            <div class="card-title">📂 Arquivos & Navegação</div>
+            <ul class="shortcut-list">
+                <li class="shortcut-item">
+                    <span class="desc">Abrir Arquivo</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>f</kbd><kbd>f</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Pesquisar Texto</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>f</kbd><kbd>w</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Explorador Lateral</span>
+                    <div class="keys"><kbd>Ctrl</kbd><kbd>n</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Fechar Aba</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>x</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Trocar Aba</span>
+                    <div class="keys"><kbd>Tab</kbd> / <kbd>S-Tab</kbd></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coluna 3: Janelas -->
+        <div class="card">
+            <div class="card-title">🪟 Janelas (Splits)</div>
+            <ul class="shortcut-list">
+                <li class="shortcut-item">
+                    <span class="desc">Dividir Vertical</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>v</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Dividir Horizontal</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>h</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Navegar Janelas</span>
+                    <div class="keys"><kbd>Ctrl</kbd> + <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Redimensionar</span>
+                    <div class="keys"><kbd>:</kbd>resize</div>
+                </li>
+                 <li class="shortcut-item">
+                    <span class="desc">Focar Código</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>z</kbd></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coluna 4: Sistema -->
+        <div class="card">
+            <div class="card-title">⚙️ Sistema & Comandos</div>
+            <ul class="shortcut-list">
+                <li class="shortcut-item">
+                    <span class="desc">Salvar Arquivo</span>
+                    <div class="keys"><kbd>:</kbd>w <span class="desc">ou</span> <kbd>C</kbd><kbd>s</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Sair (Quit)</span>
+                    <div class="keys"><kbd>:</kbd>q</div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Gerenciador Plugins</span>
+                    <div class="keys"><kbd>:</kbd>Lazy</div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Ferramentas (LSP)</span>
+                    <div class="keys"><kbd>:</kbd>Mason</div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Verificar Saúde</span>
+                    <div class="keys"><kbd>:</kbd>checkhealth</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coluna 5: Código -->
+        <div class="card">
+            <div class="card-title">🚀 Código (LSP)</div>
+            <ul class="shortcut-list">
+                <li class="shortcut-item">
+                    <span class="desc">Ir para Definição</span>
+                    <div class="keys"><kbd>g</kbd><kbd>d</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Ver Referências</span>
+                    <div class="keys"><kbd>g</kbd><kbd>r</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Documentação</span>
+                    <div class="keys"><kbd>K</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Formatar</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>f</kbd><kbd>m</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Code Action (Fix)</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>c</kbd><kbd>a</kbd></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coluna 6: Python & Rust -->
+        <div class="card">
+            <div class="card-title">🐍 Python & 🦀 Rust</div>
+            <ul class="shortcut-list">
+                <li class="shortcut-item">
+                    <span class="desc">Selecionar Venv</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>v</kbd><kbd>s</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Gemini AI</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>g</kbd><kbd>m</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Verificar Erro</span>
+                    <div class="keys"><kbd>g</kbd><kbd>l</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Renomear Var.</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>r</kbd><kbd>a</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Comentar Linha</span>
+                    <div class="keys"><kbd class="spc">Space</kbd><kbd>/</kbd></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coluna 7: Terminais -->
+        <div class="card">
+            <div class="card-title">💻 Terminais</div>
+            <ul class="shortcut-list">
+                <li class="shortcut-item">
+                    <span class="desc">Term. Flutuante</span>
+                    <div class="keys"><kbd>Alt</kbd><kbd>i</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Term. Horizontal</span>
+                    <div class="keys"><kbd>Alt</kbd><kbd>h</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Term. Vertical</span>
+                    <div class="keys"><kbd>Alt</kbd><kbd>v</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Sair do Modo Term.</span>
+                    <div class="keys"><kbd>C</kbd><kbd>x</kbd> <kbd>C</kbd><kbd>o</kbd></div>
+                </li>
+                 <li class="shortcut-item">
+                    <span class="desc">Esconder Terminal</span>
+                    <div class="keys"><kbd>Alt</kbd> + (h/v/i)</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Coluna 8: Debug -->
+        <div class="card">
+            <div class="card-title">🐞 Debugging (DAP)</div>
+            <ul class="shortcut-list">
+                <li class="shortcut-item">
+                    <span class="desc">Breakpoint</span>
+                    <div class="keys"><kbd class="spc">Spc</kbd><kbd>d</kbd><kbd>b</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Iniciar / Cont.</span>
+                    <div class="keys"><kbd class="spc">Spc</kbd><kbd>d</kbd><kbd>r</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Parar (Stop)</span>
+                    <div class="keys"><kbd class="spc">Spc</kbd><kbd>d</kbd><kbd>t</kbd></div>
+                </li>
+                <li class="shortcut-item">
+                    <span class="desc">Interface UI</span>
+                    <div class="keys"><kbd class="spc">Spc</kbd><kbd>d</kbd><kbd>u</kbd></div>
+                </li>
+                 <li class="shortcut-item">
+                    <span class="desc">Step Over</span>
+                    <div class="keys"><kbd>F10</kbd></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

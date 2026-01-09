@@ -60,5 +60,39 @@ return {
       },
     },
   },
+
+  -- Zen Mode (Focar Código)
+  {
+    "folke/zen-mode.nvim",
+    cmd = "ZenMode",
+    opts = {
+      window = {
+        backdrop = 0.95,
+        width = 120, 
+      },
+    },
+  },
+
+  -- Gemini AI (CodeCompanion)
+  {
+    "olimorris/codecompanion.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    opts = {
+      strategies = {
+        chat = {
+          adapter = "gemini",
+        },
+        inline = {
+          adapter = "gemini",
+        },
+        agent = {
+          adapter = "gemini",
+        },
+      },
+    },
+  },
 }
 
